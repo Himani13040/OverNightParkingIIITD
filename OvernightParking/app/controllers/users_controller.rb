@@ -3,17 +3,21 @@ class UsersController < ApplicationController
   before_filter :save_login_state, :only => [:new, :create]
 
   def new
-    @user = User.new
+    @user = Student.new
   end
+
   def create
-    @user = User.new(params[:user])
+    @user = Student.new(user_params)
     if @user.save
-      flash[:notice] = "You signed up successfully"
-      #flash[:color]= "valid"
-    else
-      flash[:notice] = "Form is invalid"
-      #flash[:color]= "invalid"
-    end
-    render "new"
+      session[:user_id] = @user.id
+      redirect_to(:controller => 'sessions', :action => 'home')
+     else
+      render "new"
+     end
   end
+
+  private
+    def user_params
+      params.require(:user).permit(:username,:email,:encrypted_password)
+    end
 end

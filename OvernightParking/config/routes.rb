@@ -1,23 +1,27 @@
 Rails.application.routes.draw do
-  get 'sessions/login'
-  post 'sessions/login'
+
+  root 'sessions#login'
+  get 'login' => 'sessions#login'
 
   get 'sessions/home'
-  post ''
 
-  get 'sessions/profile'
-  post ''
+  get 'signup' => 'users#new'
+  post 'users/create'
 
-  get 'sessions/setting'
-  post ''
+  post 'sessions/login_attempt'
+  get 'sessions/logout'
 
-  get 'users/new'
-  post ''
+  get 'parking_request' => 'sessions#parking_request'
 
-  root "sessions#login"
+
+
+  get 'signup/admin' => 'admin#new'
+  post 'admin/create'
+
+
  # match "signup", :to => "users#new"
  # match "login", :to => "sessions#login"
- # match "logout", :to => "sessions#logout"
+ #match "logout", :to => "sessions#logout"
  # match "home", :to => "sessions#home"
  # match "profile", :to => "sessions#profile"
  # match "setting", :to => "sessions#setting"

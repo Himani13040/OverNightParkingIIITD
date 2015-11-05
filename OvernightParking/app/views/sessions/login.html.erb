@@ -1,4 +1,6 @@
-<h1>Login</h1>
+<h1>OverNight Parking, IIIT Delhi</h1>
+<h2>Login</h2>
+<h5>Kindly login with your IIITD email id.</h5>
 
 <% flash.each  do |key,value| %>
     <%= content_tag :div, value, class: "flash #{key}"%>
@@ -8,4 +10,7 @@
     <p>Username or Email : <br> <%= text_field_tag(:username_or_email) %></p>
     <p>Password:<br> <%= password_field_tag :login_password %></p>
     <%= submit_tag("log in") %>
+
 <% end %>
+
+<%= link_to 'Sign Up','signup' %>

@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   post 'sessions/login_attempt'
   get 'sessions/logout'
 
-  get 'parking_request' => 'sessions#parking_request'
+  get 'home/cancel_request' => 'home#cancel_request'
 
+  get 'home/view_request' => 'home#view_request'
 
+  get 'home/new_request' => 'home#new_request'
 
   get 'signup/admin' => 'admin#new'
   post 'admin/create'

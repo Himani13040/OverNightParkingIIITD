@@ -36,8 +36,6 @@ class SessionsController < ApplicationController
     redirect_to :action => 'login'
   end
 
-  def parking_request
-    render "parking_request"
-  end
+
 
 end

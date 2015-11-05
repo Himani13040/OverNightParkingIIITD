@@ -11,14 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019134955) do
+ActiveRecord::Schema.define(version: 20151105070219) do
 
   create_table "admins", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "parking_areas", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parking_requests", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "role_approvals", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "roles", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "statuses", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "students", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subsystems", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +59,10 @@ ActiveRecord::Schema.define(version: 20151019134955) do
     t.string   "encrypted_password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "phone_no"
+    t.string   "gender"
+    t.string   "role"
+    t.integer  "rollno_empid"
   end
 
 end

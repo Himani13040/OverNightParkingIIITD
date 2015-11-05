@@ -1,4 +1,15 @@
 <h1>Welcome <%= @current_user.username %></h1>
 
-<h2> Your previous overnight parking details </h2>
+<p>
+  <%= link_to 'Make a new request', '/home/new_request'  %>
+</p>
 
+<p>
+  <%= link_to 'Cancel a request', '/home/cancel_request'  %>
+</p>
+
+<p>
+  <%= link_to 'View all previous requests', '/home/view_request'  %>
+</p>
+
+<%= link_to 'Sign Out', '/sessions/logout'  %>

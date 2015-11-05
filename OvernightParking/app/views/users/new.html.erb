@@ -19,9 +19,38 @@
       <%= f.text_field :username %>
     </p>
 
+
     <p>
       <%= f.label :email %><br>
       <%= f.text_field   :email %>
+    </p>
+
+    <p>
+    <%= f.label :gender %><br>
+    <%= f.radio_button :gender, 'Male', :checked => true %>
+    <%= f.label :gender_male, 'Male' %>
+    <%= f.radio_button :gender, 'Female' %>
+    <%= f.label :gender_female, 'Female' %>
+    </p>
+
+    <p>
+      <%= f.label :are_you_a %><br>
+      <%= f.radio_button :role, 'Faculty', :checked => true %>
+      <%= f.label :role_faculty, 'Faculty' %>
+      <%= f.radio_button :role, 'Staff' %>
+      <%= f.label :role_staff, 'Staff' %>
+      <%= f.radio_button :role, 'Student' %>
+      <%= f.label :role_student, 'Student' %>
+    </p>
+
+    <p>
+      <%= f.label :roll_no_or_employee_Id %><br>
+      <%= f.text_field :rollno_empid %>
+    </p>
+
+    <p>
+      <%= f.label :phone_no %><br>
+      <%= f.text_field   :phone_no %>
     </p>
 
     <p>
@@ -30,7 +59,15 @@
     </p>
 
     <p>
-      <%= f.submit %>
+      <%= f.label 'password confirmation:' %><br/>
+      <%= f.password_field :password_confirmation %>
+
+    </p>
+
+    <p>
+      <%= f.submit 'Sign Up' %>
+      <%= f.submit 'Clear Form', :type => 'reset' %>
     </p>
 
 <% end %>
+<%= link_to 'Back', '/login'  %>

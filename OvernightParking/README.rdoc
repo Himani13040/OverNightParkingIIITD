@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Welcome to OverNightParking Request
 
-Things you may want to cover:
+This section will deal with making an Overnight Parking request for any 2-wheeler/4-wheeler vehicle in the campus of IIIT-Delhi.
 
-* Ruby version
+Sign up as a user to create a new parking request.
 
-* System dependencies
+Only IIIT Delhi members can sign up for this section
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Seperate sections are there for the parking requests of Students, Faculties and Staffs. Students' request will be approved by the designated college authority.
